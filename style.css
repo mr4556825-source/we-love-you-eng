@@ -1,0 +1,235 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    user-select: none;
+
+}
+.main
+{
+    width: 90%;
+    height: 53%;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-transform: capitalize;
+
+}
+.main img{
+    width: 20% ; 
+    margin-bottom: 0.5%;
+}
+.btns{
+    width: 30%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btns button{
+    width:120px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+}
+#yes{
+    background-color: #4CAF50;
+    color: white;
+}
+#no{
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    top: 68.2%;
+    left: 50%;
+}
+.btn-div
+{
+    display: flex;
+    width: 120px;
+    height: 30px;
+}
+#yes:hover{
+    cursor: pointer;
+    background-color: #45a049;
+}
+#ifyes{
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 25px;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+#ifyes img{
+    height: 80%;
+}
+#ifyes button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+@keyframes pop {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 60%;
+        height: 50%;
+        opacity: 1;
+    }
+}
+@keyframes depop {
+    0% {
+        width: 60%;
+        height: 50%;
+        opacity: 1;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+/* ----------------------------media query---------------------------- */
+@media(max-width:480px) {
+    .main{
+        height: 60%;
+        justify-content: space-evenly;
+    }
+    .main img{
+        width: 50%;
+    }
+    .btns{
+        width: 60%;
+    }
+    #yes{
+        width: 75px;
+    }
+    #no{
+        width: 75px;
+    }
+    #ifyes h2{
+        padding: 0px 0px 0px 10px;
+        font-size: 23px;
+    }
+
+    #ifyes button{
+        top: 88%;
+        left: 45%;
+        
+    }
+    #ifyes img{
+        height: 60%;    
+    }
+    #ifyes{
+        height: 60%;
+        width: 80%;
+    }
+}
+/* @media (min-width: 768px) {
+    .btns{
+        width: 40%;
+    }
+    #yes{
+        width: 80px;
+    }
+    #no{
+        width: 80px;
+    }
+    .main img{
+        width: 25%;
+    }
+} */
+@media (min-width:480px) and (max-width:768px) {
+    .btns{
+        width: 50%;
+    }
+    #yes{
+        width: 80px;
+    }
+    #no{
+        width: 80px;
+    }
+    .main img {
+        width: 40%;
+    }
+    .main{
+        height: 70%;
+        justify-content: space-evenly;
+    }
+    #ifyes h2{
+        padding: 10px 10px 0px 10px;
+        font-size: 25px;
+    }
+    #ifyes button {
+        top: 88%;
+        left: 47%;
+    }
+    #ifyes{
+        justify-content: space-around;
+        height: 70%;
+    }
+    #ifyes img{
+        height: 60%;    
+        margin-top:-25px;
+        margin-bottom: 50px;
+    }
+}
+@media (min-width: 768px) and (max-width:1024px) {
+    #ifyes{
+        height: 70%;
+    }
+    #ifyes h2{
+        padding: 0px 0px 0px 10px;
+    }
+    #ifyes img{
+        margin-top: -50px;
+        margin-bottom: 30px;
+        height: 60%;
+    }
+    #ifyes button{
+        top: 88%;
+        left: 48%;
+    }
+}
